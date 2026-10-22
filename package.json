@@ -1,0 +1,62 @@
+{
+  "name": "mockup-designer-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Print-on-demand product designer: a template builder for store admins and a shopper customizer with a realistic 3D preview. Concept store made for Selldone.",
+  "license": "MIT",
+  "homepage": "https://modern-shop.github.io/mockup-designer-tools/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/modern-shop/mockup-designer-tools.git"
+  },
+  "keywords": [
+    "selldone",
+    "ecommerce",
+    "print-on-demand",
+    "product-customizer",
+    "mockup",
+    "webgl",
+    "3d",
+    "web-components",
+    "concept-store"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/lib/index.js"
+    },
+    "./admin": {
+      "types": "./dist/lib/admin.d.ts",
+      "import": "./dist/lib/admin.js"
+    },
+    "./customer": {
+      "types": "./dist/lib/customer.d.ts",
+      "import": "./dist/lib/customer.js"
+    },
+    "./locales/fa": {
+      "types": "./dist/lib/locales/fa.d.ts",
+      "import": "./dist/lib/locales/fa.js"
+    },
+    "./locales/en": {
+      "types": "./dist/lib/locales/en.d.ts",
+      "import": "./dist/lib/locales/en.js"
+    },
+    "./locales/de": {
+      "types": "./dist/lib/locales/de.d.ts",
+      "import": "./dist/lib/locales/de.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "check": "tsc --noEmit",
+    "build": "npm run check && vite build && tsc -p tsconfig.lib.json",
+    "test": "tsc -p tsconfig.lib.json && node --test tests/core.test.mjs",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

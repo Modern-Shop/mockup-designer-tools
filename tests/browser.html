@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Mockup Studio · Browser checks</title></head>
+  <body style="font-family:system-ui,sans-serif;margin:24px;color:#253746;background:#f6f7f9">
+    <main style="max-width:1100px;margin:auto">
+      <a href="../" style="color:#285a6c">← Back to demo</a>
+      <h1>Browser integration checks</h1>
+      <p>Real canvas exports, PNG resolution metadata, two isolated editors, revision safety, and cleanup.</p>
+      <button id="run" type="button" style="padding:10px 16px">Run checks</button>
+      <p id="summary" role="status" aria-live="polite">Ready to run.</p>
+      <pre id="results" style="white-space:pre-wrap;line-height:1.7"></pre>
+      <div id="fixtures"></div>
+    </main>
+    <script type="module" src="/tests/browser.ts"></script>
+  </body>
+</html>
